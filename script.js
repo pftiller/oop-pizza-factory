@@ -38,7 +38,7 @@ class Order {
         this.pizza = pizza;
     }
     orderPrice() {
-
+        return (this.pizza.toppings.length * 0.99) + 10;
     }
 }
 
@@ -57,6 +57,16 @@ console.log(fourthPizza.price());
 
 
 let firstOrder = new Order(firstPizza);
+let secondOrder = new Order(secondPizza);
+let thirdOrder = new Order(thirdPizza);
+let fourthOrder = new Order(fourthPizza);
 
 console.log(firstOrder);
+console.log(firstOrder.orderPrice());
+console.log(secondOrder);
+console.log(secondOrder.orderPrice());
+console.log(thirdOrder);
+console.log(thirdOrder.orderPrice());
+console.log(fourthOrder);
+console.log(fourthOrder.orderPrice());
 
